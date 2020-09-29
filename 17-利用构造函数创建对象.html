@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //构造函数的语法结构
+        // function 构造函数名(){
+        //     this.属性 = 值;
+        //     this.方法 = function(){}
+        // }
+        // new 构造函数名();
+        //1.构造函数名字首字母要大写
+        function Star(un,age,sex){
+            this.name = un;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(song){
+                console.log(song);
+            }
+        }
+        var ldh = new Star('刘德华',20,'男');//调用函数返回一个对象
+        console.log(ldh.name);
+        console.log(ldh['age']);
+        ldh.sing('十八岁');
+        //new 在执行时会做四件事情：
+        //1.在内存中创建一个新的对象
+        //2.让this指向这个新的对象
+        //3.执行构造函数里面的代码，给新的对象添加属性和方法
+        //4.返回这个新的对象（所以构造函数不需要return）
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

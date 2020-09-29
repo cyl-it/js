@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //利用 new Object 创建对象
+        var obj = new Object();//创建一个空的对象
+        obj.uname = 'hong';  //添加对象的属性和方法
+        obj.age = 20;
+        obj.sayhi = function(){
+            console.log('hi');
+        }
+        console.log(obj.uname);
+        console.log(obj['age']);
+        obj.sayhi();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
