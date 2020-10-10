@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //数组去重
+        //核心算法：遍历原数组，用原数组查询新数组，如果该元素没有在新数组出现过，添加到新数组，否则不添加。
+        function unique(arr){
+            var newArr = [];
+            for(var i=0;i<arr.length;i++){
+                if(newArr.indexOf(arr[i]) === -1){ // indexOf为-1表示新数组没有该元素
+                    newArr[newArr.length] = arr[i];
+                }
+            }
+            return newArr;
+        }
+        console.log(unique([1,2,3,3,4,4]));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

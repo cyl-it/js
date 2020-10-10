@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //统计字符串中字符出现次数最多的字符
+        //1.把每个字符都存储给对象，如果没有该属性，属性值为1，如果有属性值 +1
+        //2.for in 遍历对象，得到字符和最大值
+        var str = 'abcoefoxyozzopp';
+        var obj = {};
+        for(var i=0;i<str.length;i++){
+            var chars = str.charAt(i);//得到字符串的每一个字符
+            if(obj[chars]){    //每个字符作为对象obj的属性
+                obj[chars]++;  //obj[chars]得到该属性的属性值，属性值+1
+            }else{
+                obj[chars]=1;
+            }
+        }
+        // console.log(obj);
+        // console.log(obj['a']);//1
+        var max=0;
+        var ch ='';
+        for(var k in obj){
+            if(obj[k]>max){
+                max=obj[k]; //属性值
+                ch=k;  //属性名
+            }
+        }
+        console.log(ch +'出现次数最多:'+max);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

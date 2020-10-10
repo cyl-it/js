@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //翻转数组
+        //1. reverse()
+        // var a = [1,2,3];
+        // a.reverse();
+        // console.log(a);
+        //2.自定义函数
+        function reverse(arr){
+            if(arr instanceof Array){
+                var newArr = [];
+                for(var i=arr.length-1;i>=0;i--){
+                    newArr[newArr.length] = arr[i];
+                }
+                return newArr;
+            }else{
+                console.log('函数的参数必须是数组');
+            }
+            
+        }
+        console.log(reverse([1,2,3,4]));//数组
+        console.log(reverse(1,2,3,4));//不是数组
+        //检测是否数组
+        //1. instanceof 运算符
+        var arr = [];
+        var obj = {};
+        console.log(arr instanceof Array); //true
+        console.log(obj instanceof Array); //false
+        //2. Array.isArray()     优于 instanceof
+        console.log(Array.isArray(arr));  //true
+        console.log(Array.isArray(obj));  //false
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
